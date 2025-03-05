@@ -2,3 +2,4 @@ pymongo
 flask
 scikit-learn
 pandas
+pip install gunicorn
