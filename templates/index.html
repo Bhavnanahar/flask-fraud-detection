@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fraud Prediction</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fraud Prediction</title>
+        <!-- Link to the updated CSS file -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    
 <body>
     <div class="container">
         <h1>Fraud Prediction using Random Forest</h1>
-
+        
         <form action="/predict" method="POST">
             <label for="merchant">Merchant:</label>
-            <input type="text" id="merchant" name="merchant" required><br><br>
+            <input type="text" id="merchant" name="merchant" placeholder="Enter merchant name" required>
 
             <label for="category">Category:</label>
-            <input type="text" id="category" name="category" required><br><br>
+            <input type="text" id="category" name="category" placeholder="Enter transaction category" required>
 
             <label for="amt">Amount:</label>
-            <input type="number" id="amt" name="amt" required><br><br>
+            <input type="number" id="amt" name="amt" placeholder="Enter amount" step="0.01" required>
 
-            <label for="gender">Gender (M/F):</label>
+            <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
-                <option value="M">M</option>
-                <option value="F">F</option>
-            </select><br><br>
+                <option value="" disabled selected>Select gender</option>
+                <option value="M">Male (M)</option>
+                <option value="F">Female (F)</option>
+            </select>
 
             <label for="job">Job:</label>
-            <input type="text" id="job" name="job" required><br><br>
+            <input type="text" id="job" name="job" placeholder="Enter job title" required>
 
             <button type="submit">Predict</button>
         </form>
@@ -38,3 +41,6 @@
     </div>
 </body>
 </html>
+
+
+              
