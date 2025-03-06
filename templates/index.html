@@ -5,9 +5,115 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fraud Prediction</title>
         <!-- Link to the updated CSS file -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<!--         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
     </head>
-    
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #444;
+    text-align: left;
+}
+
+input, select {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #74EBD5;
+    box-shadow: 0 0 10px rgba(116, 235, 213, 0.5);
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    background: #6C63FF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #5A54E6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Prediction result styling */
+h2 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 1.5em;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+    </style>
 <body>
     <div class="container">
         <h1>Fraud Prediction using Random Forest</h1>
