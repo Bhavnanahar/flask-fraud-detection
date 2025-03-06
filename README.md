@@ -1,6 +1,9 @@
 Fraud Detection App
+
+
 Welcome to the Fraud Detection App! This project utilizes machine learning to predict whether a transaction is fraudulent or not based on user input. It's designed to help merchants, businesses, or individuals prevent financial losses due to suspicious transactions. With features like transaction classification, this app is a step toward smarter, safer financial management.
-"C:\Users\bhavn\OneDrive\Pictures\Screenshots\Screenshot 2025-03-06 132109.png"
+![Screenshot 2025-03-06 132109](https://github.com/user-attachments/assets/51ccf235-8666-4f85-8e46-4327e85a21a0)
+
 🚀 Features
 Real-time Fraud Detection: Predict if a transaction is fraudulent or legitimate based on transaction details like merchant name, category, amount, and job type.
 User-Friendly Interface: Simple input fields for entering transaction information, making it easy for anyone to use.
